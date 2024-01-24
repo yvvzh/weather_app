@@ -57,5 +57,26 @@ body {
     height: 800px;
     width: 500px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.data-container img {
+    height: 800px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    position: absolute;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.data-container p {
+    z-index: 1;
+    font-size: 40px;
+    font-weight: 700;
 }
