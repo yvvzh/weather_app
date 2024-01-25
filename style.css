@@ -2,7 +2,6 @@
 
 * {
     font-family: "Source Code Pro", monospace;
-    color: rgb(28, 28, 28);
     font-size: 20px;
     font-weight: 500;
 }
@@ -52,6 +51,39 @@ body {
     color: rgba(28, 28, 28, 0.775);
 }
 
+.search-result {
+    z-index: 2;
+    background-color: #303030ea;
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 100px;
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 15px;
+}
+
+.search-result .result {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    color: #eee5ff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-result .result:hover {
+    color: #b68fff;
+}
+
+.search-result .result:not(:last-child) {
+    padding-bottom: 10px;
+}
+
 .data-container {
     background-color: rgba(28, 28, 28, 0.162);
     height: 800px;
@@ -59,9 +91,7 @@ body {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
 }
 
@@ -75,8 +105,25 @@ body {
     z-index: 0;
 }
 
+.data-container div {
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+
 .data-container p {
     z-index: 1;
-    font-size: 40px;
+    font-size: 26px;
     font-weight: 700;
+    color: rgb(28, 28, 28);
+    text-shadow: rgb(255, 255, 255) 0 0 5px;
+}
+
+#city-display p {
+    font-size: 40px;
+}
+
+#temperature-display p,
+#wind-display p {
+    margin: 0;
 }
